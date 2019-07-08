@@ -7,3 +7,4 @@ func main() {
 	result := lcd.AlwaysReturn1()
 	fmt.Println(result)
 }
+
