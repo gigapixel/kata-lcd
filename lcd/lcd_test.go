@@ -86,3 +86,17 @@ func TestNumber12(t *testing.T) {
 	assert.Equal(t, result[1], "  | _|")
 	assert.Equal(t, result[2], "  ||_ ")
 }
+
+func TestNumberDot(t *testing.T) {
+	result := LCD(11.1)
+	assert.Equal(t, result[0], "            ")
+	assert.Equal(t, result[1], "  |  |     |")
+	assert.Equal(t, result[2], "  |  |  .  |")
+}
+
+func TestNumberComma(t *testing.T) {
+	result := LCD(1111)
+	assert.Equal(t, result[0], "               ")
+	assert.Equal(t, result[1], "  |     |  |  |")
+	assert.Equal(t, result[2], "  |  ,  |  |  |")
+}

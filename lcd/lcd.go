@@ -1,7 +1,7 @@
 package lcd
 
 import "fmt"
-
+import "github.com/dustin/go-humanize"
 // AlwaysReturn1 -
 func AlwaysReturn1() int {
 	return 1
@@ -19,11 +19,14 @@ var digits = map[string][3]string{
 	"8": [3]string{" _ ", "|_|", "|_|"},
 	"9": [3]string{" _ ", "|_|", " _|"},
 	".": [3]string{"   ", "   ", "  ."},
+	",": [3]string{"   ", "   ", "  ,"},
 }
 
-func LCD(number float32) [3]string {
+func LCD(number float64) [3]string {
 
-	str := fmt.Sprint(number)
+	str := humanize.Commaf(number)
+	fmt.Println(str)
+	// str := fmt.Sprint(number)
 
 	var line1 = ""
 	var line2 = ""
