@@ -57,3 +57,32 @@ func TestNumber7(t *testing.T) {
 	assert.Equal(t, result[1], "  |")
 	assert.Equal(t, result[2], "  |")
 }
+
+func TestNumber8(t *testing.T) {
+	result := LCD(8)
+	assert.Equal(t, result[0], " _ ")
+	assert.Equal(t, result[1], "|_|")
+	assert.Equal(t, result[2], "|_|")
+}
+
+
+func TestNumber9(t *testing.T) {
+	result := LCD(9)
+	assert.Equal(t, result[0], " _ ")
+	assert.Equal(t, result[1], "|_|")
+	assert.Equal(t, result[2], " _|")
+}
+
+func TestNumber0(t *testing.T) {
+	result := LCD(0)
+	assert.Equal(t, result[0], " _ ")
+	assert.Equal(t, result[1], "| |")
+	assert.Equal(t, result[2], "|_|")
+}
+
+func TestNumber12(t *testing.T) {
+	result := LCD(12)
+	assert.Equal(t, result[0], "    _ ")
+	assert.Equal(t, result[1], "  | _|")
+	assert.Equal(t, result[2], "  ||_ ")
+}
